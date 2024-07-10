@@ -1,13 +1,17 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
-    username: String,
+    username: {
+        type: String,
+        required: true,
+        unique: true // this ensures the uniqueness of username
+    },
     name: String,
     passwordHash: String,
-    notes: [
+    blogs: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Note'
+            ref: 'Blog'
         }
     ],
 })

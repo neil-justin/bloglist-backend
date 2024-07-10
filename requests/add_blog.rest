@@ -2,8 +2,9 @@ POST http://localhost:3003/api/blogs/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "blog 3",
-    "author": "author 3",
-    "url": "blog3.com",
-    "likes": 2
+    "title": "Typewriter Animation That Handles Anything You Throw at It",
+    "author": "Murtuzaali Surti ",
+    "url": "https://css-tricks.com/typewriter-animation-that-handles-anything-you-throw-at-it/",
+    "likes": 12,
+    "userId": "668ed540b89afc8855dc7a66"
 }
