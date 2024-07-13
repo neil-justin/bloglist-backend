@@ -1,10 +1,11 @@
-POST http://localhost:3003/api/blogs/ HTTP/1.1
+POST http://localhost:3003/api/blogs/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdncmFoYW0iLCJpZCI6IjY2OTJmOTIzYmI5ZmQ5M2E3NGQ4Yjk0MyIsImlhdCI6MTcyMDkwODExNH0.EcXLXDf6MqyT_UU3LW_42JbVVjSQ77puoCd6OfxGz8E
 
 {
-    "title": "Typewriter Animation That Handles Anything You Throw at It",
-    "author": "Murtuzaali Surti ",
-    "url": "https://css-tricks.com/typewriter-animation-that-handles-anything-you-throw-at-it/",
+    "title": "“If” CSS Gets Inline Conditionals",
+    "author": "Geoff Graham",
+    "url": "https://css-tricks.com/if-css-gets-inline-conditionals/",
     "likes": 12,
-    "userId": "668ed540b89afc8855dc7a66"
+    "userId": "6692f923bb9fd93a74d8b943"
 }
