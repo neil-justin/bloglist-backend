@@ -26,7 +26,6 @@ blogsRouter.post('/', async (request, response, next) => {
     try {
         const { title, author, url, likes } = request.body
         const decodedToken = jwt.verify(getTokenFrom(request), process.env.SECRET)
-        console.log(decodedToken.id)
 
         if (!decodedToken.id) {
             return response.status(401)
@@ -35,12 +34,11 @@ blogsRouter.post('/', async (request, response, next) => {
 
         const user = await User.findById(decodedToken.id)
 
-        console.log(user)
         const blog = new Blog({
             title,
             author,
             url,
-            likes,
+            likes: likes || 0,
             user: user._id
         })
         const savedBlog = await blog.save()
