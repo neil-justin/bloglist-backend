@@ -1,0 +1,10 @@
+PUT  http://localhost:3003/api/blogs/6695d5bb18ed3e22e720a90d
+Content-Type: application/json
+
+{
+    "title": "Including Navigation Code On All Pages (Even With Current Navigation H…",
+    "author": "Chris Coyier",
+    "url": "https://css-tricks.com/including-navigation-code-on-all-pages-even-wit…",
+    "likes": 12,
+    "user": "6692f923bb9fd93a74d8b943"
+}

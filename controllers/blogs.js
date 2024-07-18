@@ -12,6 +12,14 @@ blogsRouter.get('/', async (request, response) => {
     response.json(blogs)
 })
 
+blogsRouter.get('/:id', async (request, response) => {
+    const blog = await Blog
+        .findById(request.params.id)
+        .populate('user', { username: 1, name: 1 })
+
+    response.json(blog)
+})
+
 const getTokenFrom = request => {
     const authorization = request.get('authorization')
 
@@ -63,7 +71,6 @@ blogsRouter.put('/:id', async (request, response, next) => {
     } catch (error) {
         next(error)
     }
-
 })
 
 module.exports = blogsRouter
